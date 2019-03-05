@@ -1,0 +1,67 @@
+body{
+  background-color:black;
+  color:white;
+  margin:0;
+}
+.clearfix::after{
+  content:"";
+  display: block;
+  clear:both;
+}
+.topNavBar .logo{
+  float: left;
+  color:inherit;
+  text-decoration: none;
+  font-family: "Arial Black";
+  font-size: 24px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+.topNavBar nav{
+  float: right;
+  padding-top: 7px;
+  padding-bottom: 1px;
+}
+.topNavBar nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topNavBar nav ul li{
+  float: left;
+  /* border: 1px solid red; */
+  margin-left: 17px;
+  margin-right: 17px; 
+}
+.topNavBar nav ul li a{
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7); 
+  display: block;
+  font-size: 12px;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+}
+.topNavBar nav ul li a:hover{
+  border-bottom: 3px solid red;
+}
+.rs{
+  color: #e6686a;
+  margin-right: 4px;
+}
+.topNavBar .logo .card{
+  color: #9A9DA2;
+}
+.topNavBar{
+  padding: 20px 16px ;
+}
+/* ======================================= */
+
+.banner{
+  height: 516px;
+  background-position: center center;
+  background-size: cover;
+}
+
