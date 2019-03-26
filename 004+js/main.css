@@ -1,0 +1,506 @@
+body {
+  background-color: #efefef;
+  color: black;
+  margin: 0;
+}
+/* [data-x].active{outline:10px solid red} */
+[data-x].offset{transform: translateY(200px);}
+[data-x]{transform: translateY(0);transition:all 0.5s;}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.topNavBar {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* border: 1px solid turquoise; */
+  transition: all 0.5s;
+  color: rgb(197, 195, 197);
+}
+
+.topNavBar.sticky{background: white;padding:10px 0; z-index: 1;box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);color: #3d4451}
+
+.topNavBar .logo {
+  float: left;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Arial Black";
+  font-size: 24px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  /* border: 1px solid green; */
+}
+
+.topNavBar nav {
+  float: right;
+  padding-top: 7px;
+  padding-bottom: 1px;
+  /* border: 1px solid gold; */
+}
+
+.topNavBar nav>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topNavBar nav>ul>li {
+  float: left;
+  /* border: 1px solid red; */
+  margin-left: 17px;
+  margin-right: 17px;
+  position:relative;
+  
+}
+
+.topNavBar nav>ul>li>a {
+  text-decoration: none;
+  font-weight: bold;
+  color:inherit;
+  display: block;
+  font-size: 12px;
+  /* border-bottom: 3px solid transparent; */
+  border-top: 3px solid transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.topNavBar nav>ul>li.active>a::after,.topNavBar nav>ul>li.highlight>a::after{
+  content: '';
+  position:absolute;
+  top:100%;  
+  left:0;
+  width:100%;
+  height:3px;
+  background:#e06567;
+  animation:menuSlide 0.5s; 
+
+}
+
+
+@keyframes menuSlide{
+  0%{
+    width:0;
+  }
+  100%{
+    width:100%;
+  }
+}
+
+.topNavBar .submenu{
+  display:none;
+  position: absolute;
+  top:110%;
+  right:0;
+  background: white;
+  color:#3d4451
+  
+}
+.topNavBar .submenu li{
+  white-space: nowrap;
+  padding:5px 10px;
+  font-size:14px;
+}
+
+.topNavBar nav>ul>li.active>ul.submenu{
+  display:block;
+  animation: submenuSlide 0.5s;
+}
+@keyframes submenuSlide{
+  0%{
+    margin-right:100%;
+  }
+  100%{
+    margin-right:0;
+  }
+}
+
+.rs {
+  color: #e6686a;
+  margin-right: 4px;
+}
+
+.topNavBar .logo .card {
+  color: #9A9DA2;
+}
+
+
+/* ======================================= */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.banner {
+  height: 515px;
+  background-position: center center;
+  background-size: cover;
+
+}
+
+.banner .mask {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* border: 10px solid red; */
+  height: 515px;
+
+}
+
+.topNavBar-inner {
+  padding: 0 16px;
+  /* border: 1px solid red; */
+}
+
+main .useCard {
+  /* border:3px solid red; */
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+main .useCard .pictureAndText {
+  padding: 50px;
+  padding-bottom: 35px;
+}
+
+main .text .welcom {
+  /* border: 2px solid red; */
+  display: inline-block;
+  padding: 5px 17px;
+  background-color: rgb(232 103 107);
+  color: white;
+  /* font-weight: bold; */
+  font-size: 14px;
+  line-height: 19px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.welcom .triangle {
+  display: block;
+  width: 0px;
+  border: 10px solid transparent;
+  border-left-color: #e6686a;
+  /* border-left-color: black; */
+  border-top-width: 0;
+  position: absolute;
+  left: 12%;
+  top: 100%;
+
+}
+
+main .pictureAndText {}
+
+main .picture {
+  float: left;
+}
+
+main .text {
+  float: left;
+  margin-left: 50px;
+  width: 471px;
+}
+
+main .text h1 {
+  margin-bottom: 10px;
+}
+
+main .text hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
+  margin: 28px 0 15px;
+}
+
+main .text dl dt {
+  font-size: 12px;
+  float: left;
+  width: 30%;
+  padding: 8px 0;
+  font-weight: bold;
+
+}
+
+main .text dl dd {
+  font-size: 15px;
+  float: left;
+  width: 70%;
+  padding: 8px 0;
+  color: #9da0a7;
+}
+
+main .useCard .media {
+  background-color: #e8676b;
+  text-align: center;
+
+}
+
+.useCard svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  padding-top: 5px;
+  padding-bottom: 7px;
+
+  vertical-align: top;
+}
+
+.useCard .media a {
+  text-decoration: none;
+  /* border: 1px solid black; */
+  display: inline-block;
+  /* border-radius: 50%; */
+  width: 40px;
+  height: 40px;
+  margin: 16px 32px;
+
+}
+
+.useCard .media a:hover {
+  border-radius: 50%;
+  background-color: #cf5d5f;
+}
+
+/* ======================================= */
+body main {
+  margin-top: -344px;
+
+}
+
+main p a.downResume {
+  text-decoration: none;
+  color: #3d4451;
+  border: 1px solid #cdcfd1;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 21px 55px;
+  display: inline-block;
+  background-color: #efefef;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 34px 0;
+  transition: box-shadow 0.3s;
+
+}
+
+main p a.downResume:hover {
+  box-shadow: 0px 4px 11px -2px rgba(0, 0, 0, 0.3);
+
+}
+
+main .downResume-wrapper {
+  text-align: center;
+}
+
+main .selfIntroduction {
+  max-width: 930px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: kai;
+  line-height: 1.8;
+  font-size: 18px;
+
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+section.skills,
+section.portfolio {
+  margin-top: 70px;
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+section.skills h2,
+section.portfolio h2 {
+  text-align: center;
+  color: #3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+section.skills ol {
+  background-color: #fff;
+  box-shadow: 0px 4px 11px -2px rgba(0, 0, 0, 0.3);
+  padding: 40px 50px 0;
+  margin-top: 30px;
+}
+
+section.skills ol li {
+  float: left;
+  width: 48%;
+  box-sizing: border-box;
+  /* 用来设置 @3处 使padding数值也包含在50%宽度范围里，否则宽度不够会自动换行。 */
+
+
+}
+
+section.skills ol li h3 {
+  font-size: 12px;
+  color: #3d4451;
+}
+
+section.skills ol li:nth-child(2n) {
+  float: right;
+}
+
+/* section.skills ol li:nth-child(2n){
+  padding-left: 30px;     /*@3处 * /
+} */
+
+
+section.skills ol .processBar {
+  /* border:1px solid red; */
+  height: 5px;
+  border-radius: 2px;
+  background-color: rgb(250, 225, 225);
+  margin: 4px 0 40px;
+  overflow: hidden;
+
+}
+
+
+section.skills ol .processBar .process {
+  height: 100%;
+  background-color: #e8676b;
+  width: 50%;
+  border-radius: 2px;
+  transform: translateX(0);
+  transition:all 1s;
+  
+}
+section.skills.offset ol .processBar .process{
+  transform:translateX(-100%);
+}
+
+section.skills ol li:nth-child(3) .process {
+  width: 50%;
+}
+
+section.skills ol li:nth-child(1) .process {
+  width: 56%;
+}
+
+section.skills ol li:nth-child(5) .process {
+  width: 60%;
+}
+
+section.skills ol li:nth-child(6) .process {
+  width: 35%;
+}
+
+section.skills ol li:nth-child(2) .process {
+  width: 70%;
+}
+
+section.skills ol li:nth-child(4) .process {
+  width: 60%;
+}
+
+section.portfolio nav ol li {
+  float: left;
+  /* border:1px solid red; */
+  font-weight: bold;
+  font-family: "Microsoft-Yahei";
+
+  vertical-align: top;
+  /* margin-left:40px; */
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+section.portfolio nav ol li:first-child {
+  margin-left: 0;
+}
+
+section.portfolio nav ol {
+  /* border:1px solid green; */
+  display: inline-block;
+  margin: 40px auto 0;
+}
+
+section.portfolio nav {
+  text-align: center;
+  /* margin-top: 40px;*/
+}
+
+section.portfolio nav .bar {
+  /* border:1px solid red; */
+  height: 5px;
+  border-radius: 2px;
+  background-color: #fff;
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+section.portfolio nav .bar .bar-inner {
+  height: 100%;
+
+  background-color: #e8676b;
+  /* border:1px solid green; */
+  border-radius: 2px;
+  transition: all 0.2s ease-in;
+
+}
+
+section.portfolio nav .bar.state-1 .bar-inner {
+  width: 17%;
+  margin-left: 0px;
+}
+
+section.portfolio nav .bar.state-2 .bar-inner {
+  width: 17%;
+  margin-left: 69px;
+}
+
+section.portfolio nav .bar.state-3 .bar-inner {
+  width: 41%;
+  margin-left: 140px;
+}
+
+
+
+
+
+nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.portfolio {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+section.portfolio .works {
+  position: relative;
+  /* border :1px solid red; */
+}
+
+section.portfolio .works .big,
+section.portfolio .works .small {
+  position: absolute;
+}

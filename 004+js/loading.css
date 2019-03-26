@@ -1,0 +1,32 @@
+.loading{
+  /* border:1px solid red; */
+  width:200px;
+  height:200px;
+  position:relative;
+
+}
+.loading::before,.loading::after{
+  content:'';
+  width:0;
+  height:0; 
+  border-radius:50%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  background:rgb(181,184,249);
+  animation:s 1.2s linear infinite ;
+}
+.loading::after{
+  animation-delay:0.6s;
+}
+@keyframes  s{
+  0%{
+    width:0;height:0;opacity:0.8;
+  }
+  100%{
+    width:80px;height:80px;opacity:0.2;
+  }
+}
