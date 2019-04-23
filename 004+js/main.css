@@ -494,7 +494,9 @@ section.portfolio {
   text-align: center;
   margin-bottom: 100px;
 }
-
+section.portfolio h2{
+  margin-bottom:32px;
+}
 section.portfolio .works {
   position: relative;
   /* border :1px solid red; */
@@ -503,4 +505,31 @@ section.portfolio .works {
 section.portfolio .works .big,
 section.portfolio .works .small {
   position: absolute;
+
+}
+.swiper-container {
+    width: 888px;
+    height: 666px;
+    background:#ddd;
+
+  
+} 
+.swiper-button-prev{
+  background-color:white;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  left:-76px;
+  margin-top:0;
+  outline:none;
+}
+
+.swiper-button-next{
+  background-color:white;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  right:-76px;
+  margin-top:0;
+  outline:none;
 }
