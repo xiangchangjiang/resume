@@ -311,26 +311,24 @@ ol {
   list-style: none;
 }
 
-section.skills,
-section.portfolio {
+section.skills {
   margin-top: 70px;
   max-width: 930px;
   margin-left: auto;
   margin-right: auto;
 
 }
+section.portfolio {
+  margin-top: 70px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
 }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 section.skills h2,
-section.portfolio h2 {
+section.portfolio h2 ,section.message h2{
   text-align: center;
   color: #3d4451;
   font-size: 34px;
@@ -504,8 +502,8 @@ section.portfolio .works .small {
 
 }
 .swiper-container {
-    width: 888px;
-    height: 666px;
+    width: 600px;
+    height: 450px;
     background:#ddd;
 
   
@@ -528,4 +526,17 @@ section.portfolio .works .small {
   right:-76px;
   margin-top:0;
   outline:none;
+}
+
+section.message > ol{
+  max-width:700px;
+  margin: 0 auto;
+  border-top:1px solid #ddd;
+}
+section.message > ol>li{
+  padding:16px;
+  border-bottom:1px solid #ddd;
+}
+section.message>h2{
+  margin-bottom: 60px;
 }
